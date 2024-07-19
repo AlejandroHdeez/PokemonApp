@@ -59,13 +59,14 @@
     </div>
     <div class="col-md-4">
         <ng-container class="mt-6" *ngIf="pokemon">
-            <h1 class="txt-center mt-5">Detalle del Pokemon</h1>
+            <h1 class="text-center mt-5">Detalle del Pokemon</h1>
             <div class="card" style="width: 30rem; backgroud-color: #FFBAAB">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -99,7 +100,7 @@
                         <div class="col-md-12">
                             <h3 class="text-center mt-5">Abilities</h3>
                         </div>
-                        <div *ngFor="let ability of pokemon.abilities" class="col-md-6">
+                        <div *ngFor="let ability of pokemon.abilities" class="col-md-6 text-center">
                             {{ability.ability.name}}
                         </div>
                     </div>
@@ -110,13 +111,13 @@
                         </div>
 
                         <ul class="list-unstyled">
-                            <li class="media">
+                            <li class="media text-center">
                                 <audio controls>
                                     <source [src]="pokemon.cries.latest" type="audio/ogg">
                                   </audio>
                             </li>
 
-                            <li class="media">
+                            <li class="media text-center">
                                 <audio controls>
                                     <source [src]="pokemon.cries.legacy" type="audio/ogg">
                                   </audio>
@@ -128,7 +129,7 @@
                         <div class="col-md-12">
                             <h3 class="text-center mt-5">Stats</h3>
                         </div>
-                        <div *ngFor="let stat of pokemon.stats" class="col-md-6">
+                        <div *ngFor="let stat of pokemon.stats" class="col-md-6 text-center">
                             base stat: {{stat.base_stat}} - effort: {{stat.effort}}
                         </div>
                     </div>
